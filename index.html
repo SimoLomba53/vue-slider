@@ -38,48 +38,11 @@
                 <div class="slide active">
                    <img :src="movie.images[movie.activeImage]" alt="">
                 </div>    
-                                
-                <!--<div class="slide active">
-					<img src="./img/01.webp">
-					<div class="slide-text">
-						<h2>{{ movie.titolo }}</h2>
-						<p>{{ movie.testo }}</p>
-					</div>
-				</div>
-				<div class="slide">
-					<img src="./img/02.webp">
-					div.te
-					<div class="slide-text">
-						<h2>{{ movie.titolo }}</h2>
-						<p>{{ movie.testo }}</p>
-					</div>
-				</div>
-				<div class="slide">
-					<img src="./img/03.webp">
-					<div class="slide-text">
-						<h2>{{ movie.titolo }}</h2>
-						<p>{{ movie.testo }}</p>
-					</div>
-				</div>
-				<div class="slide">
-					<img src="./img/04.webp">
-					<div class="slide-text">
-						<h2>{{ movie.titolo }}</h2>
-						<p>{{ movie.testo }}</p>
-					</div>
-				</div>
-				<div class="slide">
-					<img src="./img/05.webp">
-					<div class="slide-text">
-						<h2>{{ movie.titolo }}</h2>
-						<p>{{ movie.testo }}</p>
-					</div>
-				</div> -->
             </div>
             <!--THUMBS-->
             
             <div class="my-carousel-thumbs row" id="thumbs-container">
-                <img :src="image" v-for="(image,index) in movie.images" class="col thumb" :class="(index == movie.activeImage)? 'active' : '' ">
+                <img :src="image" v-for="(image,imageIndex) in movie.images" class="col thumb" :class="(imageIndex == movie.activeImage)? 'active' : '' " @click="switchToImages(imageIndex)">
             </div>
              <!--CONTROLLI-->
             <div class="controls">
