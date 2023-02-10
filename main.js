@@ -48,7 +48,9 @@
     },
 
     created(){
-
+       setInterval(()=>{
+        this.nextImage();
+       }, 3000)
     },
 
     mounted(){
