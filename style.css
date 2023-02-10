@@ -51,6 +51,7 @@ img {
 
 .thumb {
     height: 20vh;
+    width:20vw;
     cursor: pointer;
 }
 
